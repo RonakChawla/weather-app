@@ -50,7 +50,9 @@ function showWeatherReport(weather){
         document.body.style.backgroundImage = "url('images/thunderstorm.jpg')";
     }
 
-    if(`${weather.name}` === document.getElementById('input-box').value){
+    let cityName = `${weather.name[0].toUpperCase()}` + `${weather.name.slice(1)}`;
+
+    if(cityName === `${weather.name}`){
         showAlert("Results updated...");
     }
 }
