@@ -49,6 +49,10 @@ function showWeatherReport(weather){
     } else if(waetherType.textContent === 'Thunderstorm'){
         document.body.style.backgroundImage = "url('images/thunderstorm.jpg')";
     }
+
+    if(`${weather.name}` === document.getElementById('input-box').value){
+        showAlert("Results updated...");
+    }
 }
 
 function dateManage(dateArg){
@@ -61,4 +65,31 @@ function dateManage(dateArg){
     let day = days[dateArg.getDay()];
 
     return `${date} ${month} (${day}), ${year}`
+}
+
+function showAlert(message){
+    clearAlert();
+
+    const div = document.createElement('div');
+    div.className = 'alert-msg';
+
+    div.appendChild(document.createTextNode(message));
+
+    const container = document.querySelector('.app-main');
+
+    const search = document.getElementById('weather-body');
+
+    container.insertBefore(div, search);
+
+    setTimeout(() => {
+        clearAlert();
+    }, 5000);
+}
+
+function clearAlert(){
+    const currentAlert = document.querySelector('.alert-msg');
+
+    if(currentAlert){
+        currentAlert.remove();
+    }
 }
