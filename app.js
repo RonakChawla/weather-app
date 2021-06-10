@@ -30,7 +30,8 @@ function showWeatherReport(weather){
     
         document.getElementById('city').innerHTML = `${weather.name}, ${weather.sys.country}`;
         document.getElementById('temp').innerHTML = `${weather.main.temp}&deg;C`;
-        document.getElementById('humidity').innerHTML = `Humidity: ${weather.main.humidity}`;
+        document.getElementById('feels-like').innerHTML = `Feels Like: ${weather.main.feels_like}&deg;C`;
+        document.getElementById('humidity').innerHTML = `Humidity: ${weather.main.humidity}%`;
     
         let waetherType = document.getElementById('weather');
         waetherType.innerHTML = `${weather.weather[0].main}`;
