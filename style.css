@@ -88,6 +88,7 @@ body{
 
     .weather-body{
         width: 95%;
+        height: 50vh;
     }
 
     .temp{
