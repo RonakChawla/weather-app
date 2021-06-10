@@ -88,11 +88,14 @@ body{
 
     .weather-body{
         width: 95%;
-        height: 50vh;
     }
 
     .temp{
         font-size: 36pt;
         font-weight: normal;
+    }
+
+    .app-main{
+        margin: 50px auto;
     }
 }
