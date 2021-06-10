@@ -68,7 +68,7 @@ body{
     text-shadow: 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.ffels-like, .humidity, .weather{
+.feels-like, .humidity, .weather{
     font-size: 12pt;
     font-weight: 600;
 }
