@@ -68,7 +68,30 @@ body{
     text-shadow: 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.min-max, .weather{
+.humidity, .weather{
     font-size: 12pt;
     font-weight: 600;
+}
+
+@media (max-width: 400px){
+    .app-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 100px auto;
+        background-color: rgba(196, 209, 16, 0.6);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .weather-body{
+        width: 95%;
+    }
+
+    .temp{
+        font-size: 36pt;
+        font-weight: normal;
+    }
 }
